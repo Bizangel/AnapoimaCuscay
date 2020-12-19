@@ -1,0 +1,75 @@
+<krpano>	
+	<action name="updateRadar" scope="local" args="spot_n">
+		calc(spotname, 'spot' + spot_n);
+		set(layer[radar].parent, get(spotname));
+		set(layer[radar].heading, get(layer[get(spotname)].facing) );
+
+		if(spot_n LE 16,
+			switchFloor(1);
+			,
+			switchFloor(2);
+		);
+	</action>
+	
+	<action name="switchFloor" scope="local" args="nfloor"> 
+		if(nfloor == 1,
+			set(layer[map].url,%ROOT%/floor1hab3.png);
+			<!-- Enable 1st layers -->
+			for(set(i,1), i LE 16, inc(i), 
+				set(layer[calc('spot' + i)].visible, true);
+			);  
+			<!-- Disable 2nd layers -->
+			for(set(i,17), i LE 22, inc(i), 
+				set(layer[calc('spot' + i)].visible, false);
+			);  
+			
+			,
+			set(layer[map].url,%ROOT%/floor2.png);
+			<!-- Disable 1st layers -->
+			for(set(i,1), i LE 16, inc(i), 
+				set(layer[calc('spot' + i)].visible, false);
+			);  
+			<!-- Enable 2nd layers -->
+			for(set(i,17), i LE 22, inc(i), 
+				set(layer[calc('spot' + i)].visible, true);
+			);  
+		);
+	</action>
+
+	<layer name="radar" keep = "true" url.flash="%SWFPATH%/plugins/radar.swf" url.html5="%SWFPATH%/plugins/radar.js" align="center" zorder="1" scale.mobile="2.3" fillalpha="0.5" scale="1"
+ fillcolor="0x7F5F3F" linewidth="1.0" linecolor="0xE0E0A0" linealpha="0.5" editmode="true" />
+	
+	<action name="mapspot_onclick" scope="local">
+		loadscene(get(caller.linkedscene), null, MERGE, BLEND(0.5));
+	</action>
+	
+	<layer name="map" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false" type="container"
+	capture="false" align="leftbottom" scale="0.2" scale.mobile="0.11" scalechildren="true" bgcapture="false"/>
+	
+	<style name="mapspot" keep="true" url="greendot.png" parent="map" align="lefttop" edge="center" scale.mobile="2.5"
+	onclick="mapspot_onclick();"/>
+	
+	<layer name="spot1" style="mapspot" x="952" y="1046" zorder="1" linkedscene="room1" facing="-90"/>
+	<layer name="spot2" style="mapspot" x="1154" y="1079" zorder="1" linkedscene="room1_bath" facing="200"/>
+	<layer name="spot3" style="mapspot" x="1222" y="1016" zorder="1" linkedscene="room1_shower" facing="150"/>
+	<layer name="spot4" style="mapspot" x="1567" y="1128" zorder="1" linkedscene="room2" facing="205"/>
+	<layer name="spot5" style="mapspot" x="1328" y="1072" zorder="1" linkedscene="room2_bath" facing="150"/>
+	<layer name="spot6" style="mapspot" x="1495" y="865" zorder="1" linkedscene="room2_outside" facing="140"/>
+	<layer name="spot7" style="mapspot" x="1008" y="853" zorder="1" linkedscene="room1_outside" facing="140"/>
+	<layer name="spot8" style="mapspot" x="1350" y="1382" zorder="1" linkedscene="parking" facing="50"/>
+	<layer name="spot9" style="mapspot" x="427" y="886" zorder="1" linkedscene="bbq" facing="150"/>
+	<layer name="spot10" style="mapspot" x="680" y="869" zorder="1" linkedscene="living" facing="-110"/>
+	<layer name="spot11" style="mapspot" x="532" y="1239" zorder="1" linkedscene="kitchen" facing="-30"/>
+	<layer name="spot12" style="mapspot" x="681" y="516" zorder="1" linkedscene="pool_front" facing="160"/>
+	<layer name="spot13" style="mapspot" x="506" y="30" zorder="1" linkedscene="pool_back" facing="-80"/>
+	<layer name="spot14" style="mapspot" x="1273" y="104" zorder="1" linkedscene="grassfield" facing="-50"/>
+	<layer name="spot15" style="mapspot" x="626" y="1368" zorder="1" linkedscene="dishes_view" facing="215"/>
+	<layer name="spot16" style="mapspot" x="874" y="1194" zorder="1" linkedscene="entrance_hallway" facing="210"/>
+	
+	<layer name="spot17" style="mapspot" x="642" y="1270" zorder="1" linkedscene="second_floor_corner" facing="0"/>
+	<layer name="spot18" style="mapspot" x="944" y="276" zorder="1" linkedscene="second_floor_pool_view" facing="-85"/>
+	<layer name="spot19" style="mapspot" x="818" y="1024" zorder="1" linkedscene="room_second_floor" facing="-90"/>
+	<layer name="spot20" style="mapspot" x="1218" y="1018" zorder="1" linkedscene="room_second_floor_bath" facing="90"/>
+	<layer name="spot21" style="mapspot" x="1216" y="796" zorder="1" linkedscene="room_second_floor_shower" facing="-45"/>
+	
+</krpano>

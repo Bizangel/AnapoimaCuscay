@@ -1,0 +1,77 @@
+<krpano>
+	<!-- Aditional dependencies to get free of vtourskin -->
+	<action name="skin_hotspotstyle_click" scope="local">
+		if(isvalue(caller.linkedscene),
+			copy(hs_linkedscene, caller.linkedscene);
+			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
+			set(caller.enabled, false);
+			tween(caller.depth|caller.alpha|caller.oy|caller.rx, 4000|0.0|-50|-60, 0.5, default,
+				skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
+			);
+		);
+	</action>
+
+		<style name="skin_hotspotstyle" url="%ROOT%/skin/vtourskin_hotspot.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+	       onover="tween(scale,0.55);"
+	       onout="tween(scale,0.5);"
+	       onloaded="skin_hotspotstyle_setup();"
+	       />
+		   
+	<style name="skin_hotspotstyle_right" url="%ROOT%/curved-arrow-right.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+	       onover="tween(scale,0.55);"
+	       onout="tween(scale,0.5);"
+	       onloaded="skin_hotspotstyle_setup();"
+		   rotate="-60"
+	       />
+		   
+	<style name="skin_hotspotstyle_left" url="%ROOT%/curved-arrow-left.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+	       onover="tween(scale,0.55);"
+	       onout="tween(scale,0.5);"
+	       onloaded="skin_hotspotstyle_setup();"
+		   rotate="60"
+	       />
+		   
+	<action name="skin_hotspotstyle_setup" scope="local">
+		if(caller.linkedscene AND skin_settings.tooltips_hotspots,
+			copy(caller.tooltip, scene[get(caller.linkedscene)].title);
+			caller.loadstyle(skin_tooltips);
+		);
+	</action>
+	
+	
+	
+	<action name="skin_loadscene" scope="local" args="newscenenameorindex, blendmode">
+		if(webvr.isenabled AND scene.count GT 1,
+			set(hotspot[skin_webvr_prev_scene].visible, false);
+			set(hotspot[skin_webvr_next_scene].visible, false);
+		);
+
+		calc(layer[skin_thumbborder].parent, 'skin_thumb_' + scene[get(newscenenameorindex)].index);
+		
+		if(layer[debug].val,
+			layer[skin_thumbs].scrolltocenter(get(scene[get(newscenenameorindex)].thumbx), get(scene[get(newscenenameorindex)].thumby));
+		);
+		
+		loadscene(get(scene[get(newscenenameorindex)].name), null, get(skin_settings.loadscene_flags), get(blendmode));
+	</action>
+	
+</krpano>

@@ -1,0 +1,427 @@
+﻿<krpano version="1.20.7" title="Virtual Tour">
+	
+	<!-- LOTE 9 -->
+	<scene name="scene_IMG_20201210_122300" title="IMG_20201210_122300" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122300.tiles/thumb.jpg" lat="4.59551600" lng="-74.52859400" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122300.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122300.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122300.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<scene name="scene_IMG_20201210_122401" title="IMG_20201210_122401" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122401.tiles/thumb.jpg" lat="4.59557300" lng="-74.52863200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122401.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122401.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122401.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_122452" title="IMG_20201210_122452" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122452.tiles/thumb.jpg" lat="4.59555000" lng="-74.52854200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122452.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122452.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122452.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<!-- LOTE 8 -->
+
+	<scene name="scene_IMG_20201210_122826" title="IMG_20201210_122826" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122826.tiles/thumb.jpg" lat="4.59577800" lng="-74.52878800" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122826.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122826.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122826.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+
+	<scene name="scene_IMG_20201210_122707" title="IMG_20201210_122707" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122707.tiles/thumb.jpg" lat="4.59567500" lng="-74.52888200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122707.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122707.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122707.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	
+	<scene name="scene_IMG_20201210_122621" title="IMG_20201210_122621" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122621.tiles/thumb.jpg" lat="4.59543600" lng="-74.52880500" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_122621.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_122621.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_122621.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	<!-- LOTE 7 -->
+	
+	<scene name="scene_IMG_20201210_125539" title="IMG_20201210_125539" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125539.tiles/thumb.jpg" lat="4.59589800" lng="-74.52948200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125539.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125539.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125539.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_125626" title="IMG_20201210_125626" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125626.tiles/thumb.jpg" lat="4.59605000" lng="-74.52938200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125626.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125626.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125626.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_125716" title="IMG_20201210_125716" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125716.tiles/thumb.jpg" lat="4.59602800" lng="-74.52923200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125716.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125716.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125716.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<!-- LOTE 6 -->
+	
+		<scene name="scene_IMG_20201210_124435" title="IMG_20201210_124435" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124435.tiles/thumb.jpg" lat="4.59613800" lng="-74.52935900" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_124435.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_124435.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_124435.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_124844" title="IMG_20201210_124844" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124844.tiles/thumb.jpg" lat="4.59608400" lng="-74.52952000" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_124844.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_124844.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_124844.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_124952" title="IMG_20201210_124952" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124952.tiles/thumb.jpg" lat="4.59624500" lng="-74.52968300" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_124952.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_124952.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_124952.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	
+	
+	
+	<!-- LOTE 5 -->
+	
+		<scene name="scene_IMG_20201210_123846" title="IMG_20201210_123846" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123846.tiles/thumb.jpg" lat="4.59621100" lng="-74.52974400" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_123846.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_123846.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_123846.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_123945" title="IMG_20201210_123945" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123945.tiles/thumb.jpg" lat="4.59652600" lng="-74.52979500" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_123945.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_123945.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_123945.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_124051" title="IMG_20201210_124051" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124051.tiles/thumb.jpg" lat="4.59652900" lng="-74.52986200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_124051.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_124051.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_124051.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	
+	<!-- LOTE 4 -->
+	
+	<scene name="scene_IMG_20201210_125203" title="IMG_20201210_125203" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125203.tiles/thumb.jpg" lat="4.59574300" lng="-74.52950900" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125203.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125203.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125203.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_125325" title="IMG_20201210_125325" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125325.tiles/thumb.jpg" lat="4.59558300" lng="-74.52979900" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125325.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125325.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125325.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_125409" title="IMG_20201210_125409" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125409.tiles/thumb.jpg" lat="4.59554800" lng="-74.52955300" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_125409.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_125409.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_125409.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<!-- LOTE 3 -->
+	
+		<scene name="scene_IMG_20201210_130521" title="IMG_20201210_130521" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130521.tiles/thumb.jpg" lat="4.59573900" lng="-74.52935900" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130521.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130521.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130521.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_130547" title="IMG_20201210_130547" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130547.tiles/thumb.jpg" lat="4.59541500" lng="-74.52945600" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130547.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130547.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130547.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_130637" title="IMG_20201210_130637" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130637.tiles/thumb.jpg" lat="4.59556800" lng="-74.52936700" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130637.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130637.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130637.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<!-- LOTE 2 -->
+	
+	<scene name="scene_IMG_20201210_130755" title="IMG_20201210_130755" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130755.tiles/thumb.jpg" lat="4.59552800" lng="-74.52928200" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130755.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130755.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130755.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_130824" title="IMG_20201210_130824" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130824.tiles/thumb.jpg" lat="4.59528000" lng="-74.52929300" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130824.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130824.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130824.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+
+	<scene name="scene_IMG_20201210_130902" title="IMG_20201210_130902" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130902.tiles/thumb.jpg" lat="4.59529500" lng="-74.52918100" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_130902.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_130902.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_130902.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+	
+	<!-- POOL -->
+	
+		<scene name="scene_IMG_20201210_131022" title="IMG_20201210_131022" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_131022.tiles/thumb.jpg" lat="4.59566500" lng="-74.52894600" heading="0.0">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_131022.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_131022.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_131022.tiles/vr/pano_%s.jpg" />
+		</image>
+
+	</scene>
+</krpano>
