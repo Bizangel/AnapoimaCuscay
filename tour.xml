@@ -1,7 +1,7 @@
 ﻿<krpano version="1.20.7" title="Virtual Tour">
 	<layer name="debug" val="1"/>
 	
-	<include url="skin/vtourskin.xml" if="1"/>
+	<include url="skin/vtourskin.xml" if="0"/>
 	<include url="map.xml" if="1" />
 	<include url="vtour_override.xml" />
 	
@@ -22,18 +22,22 @@
 			switchFloor(2);
 		);
 		if(keycode == 72, <!-- H KEY -->
-
+			switchHouse(2f3h);
+			print(2 Floors 3 Rooms);
 		);
 		
 		if(keycode == 74, <!-- J KEY -->
-
+			switchHouse(2f2h);
+			print(2 Floors 2 Rooms);
 		);
 		
 		if(keycode == 75, <!-- K KEY -->
-		
+			switchHouse(1f3h);
+			print(1 Floors 3 Rooms);
 		);
 		if (keycode == 76, <!-- L KEY -->
-
+			switchHouse(1f2h);
+			print(1 Floors 2 Rooms);
 		);
 		
 	</action>
@@ -218,11 +222,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_105751.tiles/vr/pano_%s.jpg" />
 		</image>
+		
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="20.823" atv="2.791" linkedscene="room1_outside" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-54.649" atv="15.142" linkedscene="room2" />
 		<hotspot name="spot3" style="skin_hotspotstyle_left" ath="51.173" atv="0.289" linkedscene="pool_front" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="71.654" atv="0.190" linkedscene="pool_back" />
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="101.014" atv="2.806" linkedscene="grassfield" />
+		
+		<hotspot name="room3hotspot" style="skin_hotspotstyle" ath="-128.768" atv="12.722" linkedscene="room3" />
 
 	</scene>
 
@@ -260,9 +267,12 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_110116.tiles/vr/pano_%s.jpg" />
 		</image>
+		
 		<hotspot name="spot1" style="skin_hotspotstyle_right" ath="139.329" atv="4.387" linkedscene="entrance_hallway" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="166.923" atv="9.594" linkedscene="room1" />
 		<hotspot name="spot3" style="skin_hotspotstyle_right" ath="-148.784" atv="19.598" linkedscene="room2" />
+		
+		<hotspot name="room3hotspot" style="skin_hotspotstyle_left" ath="-63.890" atv="5.536" linkedscene="room3" />
 
 	</scene>
 
@@ -398,6 +408,7 @@
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="148.148" atv="5.636" linkedscene="room1_outside" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="173.914" atv="5.203" linkedscene="pool_front" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="-129.630" atv="6.867" linkedscene="pool_back" />
+		<hotspot name="room3hotspot" style="skin_hotspotstyle" ath="98.167" atv="1.552" linkedscene="room3" />
 
 	</scene>
 	
@@ -532,10 +543,27 @@
 	</scene>
 
 
+	<scene name="room3" title="Room 3" onstart="updateRadar(22);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_105021.tiles/thumb.jpg" lat="4.59527000" lng="-74.52884500" heading="0.0">
+
+		<view hlookat="154.953" vlookat="11.776" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_105021.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)" >
+			<cube url="panos/IMG_20201210_105021.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_105021.tiles/vr/pano_%s.jpg" />
+		</image>
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle_left" ath="12.418" atv="13.335"  linkedscene="room1_outside" /> -->
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="146.587" atv="2.650" linkedscene="parking" />
+
+	</scene>
 
 	
 
-
+	<include url="%ROOT%/f1copy.xml" if="1"/>
 	<include url="%ROOT%/lotes.xml" if="0"/>
 	
 </krpano>

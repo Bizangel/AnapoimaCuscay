@@ -1,0 +1,148 @@
+<krpano>
+		<scene name="room1_outside_floorless" title="Room 1 Outside Floorless" onstart="updateRadar(7);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/03_1_terraza_hab_01_v2.tiles/thumb.jpg" lat="4.59520000" lng="-74.52891700" heading="0.0">
+
+		<view hlookat="201.988" vlookat="1.354" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/03_1_terraza_hab_01_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/03_1_terraza_hab_01_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/03_1_terraza_hab_01_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-153.787" atv="6.645" linkedscene="room2_outside" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-53.847" atv="12.074" linkedscene="room1" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="100.433" atv="-0.696" linkedscene="pool_back" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="142.532" atv="5.966" linkedscene="grassfield" />
+		<hotspot name="spot5" style="skin_hotspotstyle_left" ath="86.995" rotate="20" atv="0.130" linkedscene="pool_front" />
+	</scene>
+
+	<scene name="room2_outside_floorless" title="Room 2 Outside Floorless" onstart="updateRadar(6);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/06_terraza_hab_02_v2.tiles/thumb.jpg" lat="4.59527500" lng="-74.52890600" heading="0.0">
+
+		<view hlookat="58.349" vlookat="-2.779" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/06_terraza_hab_02_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/06_terraza_hab_02_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/06_terraza_hab_02_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="20.823" atv="2.791" linkedscene="room1_outside" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-54.649" atv="15.142" linkedscene="room2" />
+		<hotspot name="spot3" style="skin_hotspotstyle_left" ath="51.173" atv="0.289" linkedscene="pool_front" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="71.654" atv="0.190" linkedscene="pool_back" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="101.014" atv="2.806" linkedscene="grassfield" />
+		
+		<hotspot name="room3hotspot" style="skin_hotspotstyle" ath="-128.768" atv="12.722" linkedscene="room3" />
+
+	</scene>
+
+	<scene name="parking_floorless" title="Entrance Parking Floorless" onstart="updateRadar(8)" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/07_parqueadero_v2.tiles/thumb.jpg" lat="4.59530100" lng="-74.52888200" heading="0.0">
+		
+		<view hlookat="-191.987" vlookat="2.956" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/07_parqueadero_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/07_parqueadero_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/07_parqueadero_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle_right" ath="139.329" atv="4.387" linkedscene="entrance_hallway" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="166.923" atv="9.594" linkedscene="room1" />
+		<hotspot name="spot3" style="skin_hotspotstyle_right" ath="-148.784" atv="19.598" linkedscene="room2" />
+		
+		<hotspot name="room3hotspot" style="skin_hotspotstyle_left" ath="-63.890" atv="5.536" linkedscene="room3" />
+	</scene>
+
+
+	<scene name="bbq_floorless" title="BBQ Floorless" onstart="updateRadar(9)" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/08_bbq_v2.tiles/thumb.jpg" lat="4.59510500" lng="-74.52876100" heading="0.0">
+		
+		<view hlookat="80.854" vlookat="-0.180" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/08_bbq_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/08_bbq_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/08_bbq_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-146.212" atv="17.335" linkedscene="living" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="170.805" atv="8.045" linkedscene="pool_front" />
+		
+	</scene>
+
+	<scene name="pool_front_floorless" title="Pool Front Floorless" onstart="updateRadar(12);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/11_piscina_1_v2.tiles/thumb.jpg" lat="4.59511300" lng="-74.52890500" heading="0.0">
+
+		<view hlookat="115.584" vlookat="-2.129" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		
+		<preview url="panos/11_piscina_1_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/11_piscina_1_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/11_piscina_1_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="113.158" atv="2.149" linkedscene="pool_back" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="178.038" atv="5.656" linkedscene="grassfield" />
+		<hotspot name="spot3" style="skin_hotspotstyle_left" ath="12.147" atv="6.262" linkedscene="bbq" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-74.643" atv="9.203" linkedscene="living" />
+	</scene>
+
+	<scene name="pool_back_floorless" title="Pool Back Floorless" onstart="updateRadar(13);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/12_piscina_2_v2.tiles/thumb.jpg" lat="4.59503000" lng="-74.52887800" heading="0.0">
+		
+		<view hlookat="138.874" vlookat="-0.236" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/12_piscina_2_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/12_piscina_2_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/12_piscina_2_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="93.976" atv="0.829" linkedscene="grassfield" />
+		<hotspot name="spot2" style="skin_hotspotstyle_left" ath="167.995" atv="5.812" linkedscene="pool_front" />
+
+	</scene>
+
+
+	<scene name="grassfield_floorless" title="Grassfield Floorless" onstart="updateRadar(14);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/13_exterior_prado_habs_v2.tiles/thumb.jpg" lat="4.59510600" lng="-74.52896800" heading="0.0">
+
+		<view hlookat="147.668" vlookat="-1.890" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/13_exterior_prado_habs_v2.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/13_exterior_prado_habs_v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/13_exterior_prado_habs_v2.tiles/vr/pano_%s.jpg" />
+		</image>
+		
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="111.802" atv="3.770" linkedscene="room2_outside" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="148.148" atv="5.636" linkedscene="room1_outside" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="173.914" atv="5.203" linkedscene="pool_front" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-129.630" atv="6.867" linkedscene="pool_back" />
+		<hotspot name="room3hotspot" style="skin_hotspotstyle" ath="98.167" atv="1.552" linkedscene="room3" />
+	</scene>
+</krpano>

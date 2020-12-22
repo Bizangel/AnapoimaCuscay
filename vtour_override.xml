@@ -6,7 +6,7 @@
 			if(caller.linkedscene_lookat, txtsplit(caller.linkedscene_lookat, ',', hs_lookat_h, hs_lookat_v, hs_lookat_fov); );
 			set(caller.enabled, false);
 			tween(caller.depth|caller.alpha|caller.oy|caller.rx, 4000|0.0|-50|-60, 0.5, default,
-				skin_loadscene(get(hs_linkedscene), get(skin_settings.loadscene_blend));
+				tour_loadscene(get(hs_linkedscene));
 				if(hs_lookat_h !== null, skin_lookat(get(hs_lookat_h), get(hs_lookat_v), get(hs_lookat_fov)); );
 			);
 		);
@@ -57,21 +57,19 @@
 		);
 	</action>
 	
-	
-	
-	<action name="skin_loadscene" scope="local" args="newscenenameorindex, blendmode">
-		if(webvr.isenabled AND scene.count GT 1,
-			set(hotspot[skin_webvr_prev_scene].visible, false);
-			set(hotspot[skin_webvr_next_scene].visible, false);
-		);
-
-		calc(layer[skin_thumbborder].parent, 'skin_thumb_' + scene[get(newscenenameorindex)].index);
+	<action name="tour_loadscene" scope="local" args="scenename">
+		if(layer[stateHolder].state == '1f3h' OR layer[stateHolder].state == '1f2h',
 		
-		if(layer[debug].val,
-			layer[skin_thumbs].scrolltocenter(get(scene[get(newscenenameorindex)].thumbx), get(scene[get(newscenenameorindex)].thumby));
+			<!-- Check if it has floorless alternatives, else load normal floorless -->
+			if(scenename == 'room1_outside' OR scenename == 'room2_outside' OR scenename == 'grassfield' OR scenename == 'parking' OR scenename == 'bbq' OR scenename == 'pool_front' OR scenename == 'pool_back',
+				loadscene(calc(scenename + '_floorless'), null, MERGE, BLEND(0.5));
+			,
+				<!-- If not one of those, normal load -->
+				loadscene(get(scenename), null, MERGE, BLEND(0.5));
+			);
+			,
+			loadscene(get(scenename), null, MERGE, BLEND(0.5));
 		);
-		
-		loadscene(get(scene[get(newscenenameorindex)].name), null, get(skin_settings.loadscene_flags), get(blendmode));
 	</action>
 	
 </krpano>
