@@ -114,7 +114,8 @@
 			tour_loadscene(get(xml.scene));
 		);
 		
-		<!-- Visual active cues-->
+		
+		<!-- Visual active cues -->
 		for(set(floor,1), floor LE 2, inc(floor), 
 			for(set(hab,2), hab LE 3, inc(hab), 
 				calc(displaystring, floor + 'f' + hab + 'h');
@@ -136,7 +137,7 @@
 		tour_loadscene(get(caller.linkedscene), null, MERGE, BLEND(0.5));
 	</action>
 	
-	<layer name="map" onloaded="VUHO_OVERLAY_ONSTART();" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false"
+	<layer name="map" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false"
 	align="leftbottom" scale="0.2" scale.mobile="0.11" scalechildren="true"  >
 		
 		
@@ -225,23 +226,23 @@
 		
 	</action>
 	
-	<layer name="mapmenu" onloaded="setMapMenu();" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" >
-		<layer name="l1" onclick="chooseMenumap(1)" url="%ROOT%/cuscayicons/l1on.png" x="575" y="450" align="lefttop" scale="0.3"  />
-		<layer name="l2" onclick="chooseMenumap(2)" url="%ROOT%/cuscayicons/l2off.png" x="525" y="430" align="lefttop" scale="0.3"  />
-		<layer name="l3" onclick="chooseMenumap(3)" url="%ROOT%/cuscayicons/l3off.png" x="477" y="400" align="lefttop" scale="0.3"  />
-		<layer name="l4" onclick="chooseMenumap(4)" url="%ROOT%/cuscayicons/l4off.png" x="425" y="375" align="lefttop" scale="0.3"  />
-		<layer name="l5" onclick="chooseMenumap(5)" url="%ROOT%/cuscayicons/l5off.png" x="400" y="255" align="lefttop" scale="0.3"  />
-		<layer name="l6" onclick="chooseMenumap(6)" url="%ROOT%/cuscayicons/l6off.png" x="465" y="285" align="lefttop" scale="0.3"  />
-		<layer name="l7" onclick="chooseMenumap(7)" url="%ROOT%/cuscayicons/l7off.png" x="510" y="325" align="lefttop" scale="0.3"  />
-		<layer name="l8" onclick="chooseMenumap(8)" url="%ROOT%/cuscayicons/l8off.png" x="592" y="375" align="lefttop" scale="0.3"  />
-		<layer name="l9" onclick="chooseMenumap(9)" url="%ROOT%/cuscayicons/l9off.png" x="665" y="385" align="lefttop" scale="0.3"  />
+	<layer name="mapmenu" onloaded="setMapMenu();" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" scalechildren="true">
+		<layer name="l1" onclick="chooseMenumap(1)" url="%ROOT%/cuscayicons/l1on.png" x="2239" y="1808" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l2" onclick="chooseMenumap(2)" url="%ROOT%/cuscayicons/l2off.png" x="2013" y="1698" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l3" onclick="chooseMenumap(3)" url="%ROOT%/cuscayicons/l3off.png" x="1828" y="1627" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l4" onclick="chooseMenumap(4)" url="%ROOT%/cuscayicons/l4off.png" x="1613" y="1512" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l5" onclick="chooseMenumap(5)" url="%ROOT%/cuscayicons/l5off.png" x="1549" y="1082" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l6" onclick="chooseMenumap(6)" url="%ROOT%/cuscayicons/l6off.png" x="1797" y="1180" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l7" onclick="chooseMenumap(7)" url="%ROOT%/cuscayicons/l7off.png" x="1953" y="1327" align="lefttop" edge="bottom"  scale="1"  />
+		<layer name="l8" onclick="chooseMenumap(8)" url="%ROOT%/cuscayicons/l8off.png" x="2301" y="1520" align="lefttop" edge="bottom" scale="1"  />
+		<layer name="l9" onclick="chooseMenumap(9)" url="%ROOT%/cuscayicons/l9off.png" x="2533" y="1581" align="lefttop" edge="bottom" scale="1"  />
 		
-		<layer name="modelWindow" url="%ROOT%/cuscayicons/modelwindow.png" align="center" x="8" y="325" scale="0.08" scalechildren="true">
+		<layer name="modelWindow" url="%ROOT%/cuscayicons/modelwindow.png" align="center" x="32" y="1200" scale="0.295" scalechildren="true">
 			<layer name="display_1f2h" url="%ROOT%/cuscayicons/2haboff.png" onclick="switchHouse(1f2h);" align="center" x="-150" y="-100" scale="1" />
 			<layer name="display_1f3h" url="%ROOT%/cuscayicons/3haboff.png" onclick="switchHouse(1f3h);" align="center" x="-150" y="600" scale="1" />
 			
 			<layer name="display_2f2h" url="%ROOT%/cuscayicons/3haboff.png" onclick="switchHouse(2f2h);" align="center" x="2350" y="-100" scale="1" />
-			<layer name="display_2f3h" url="%ROOT%/cuscayicons/4haboff.png" onclick="switchHouse(2f3h);" align="center" x="2350" y="600" scale="1" />
+			<layer name="display_2f3h" url="%ROOT%/cuscayicons/4habon.png" onclick="switchHouse(2f3h);" align="center" x="2350" y="600" scale="1" />
 		</layer>
 	</layer>
 	
