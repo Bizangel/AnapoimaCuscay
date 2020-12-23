@@ -497,14 +497,14 @@
 	<action name="onresize_action" scope="local">
 		mobile_orientation();
 		infoslide_resize_query();
-		
+		setMapMenu();
 		if(device.handheld == true,
 			if(stagewidth LT stageheight,
 			<!-- PORTRAIT -->
-			easy_rescale(map, 0.6);
+			easy_rescale(map, 0.7);
 			,
 			<!-- LANDSCAPE -->
-			easy_rescale(map, 0.7);
+			easy_rescale(map, 0.8);
 			);
 			
 		);
