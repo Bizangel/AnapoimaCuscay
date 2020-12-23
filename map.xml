@@ -193,7 +193,7 @@
 	</action>
 	
 	<action name="chooseMenumap" scope="local" args="lot_n">
-		for(set(i,1), i LE 9, inc(i), 
+		for(set(i,0), i LE 9, inc(i), 
 			if (i != lot_n,
 				set(layer[calc('l' + i)].url, calc('%ROOT%/cuscayicons/l'+ i +'off.png'));
 				,
@@ -227,6 +227,8 @@
 	</action>
 	
 	<layer name="mapmenu" onloaded="setMapMenu();" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" scalechildren="true">
+		<layer name="l0" onclick="chooseMenumap(0)" url="%ROOT%/cuscayicons/l0off.png" x="2120" y="1412" align="lefttop" edge="bottom" scale="1"  />
+		
 		<layer name="l1" onclick="chooseMenumap(1)" url="%ROOT%/cuscayicons/l1on.png" x="2239" y="1808" align="lefttop" edge="bottom" scale="1"  />
 		<layer name="l2" onclick="chooseMenumap(2)" url="%ROOT%/cuscayicons/l2off.png" x="2013" y="1698" align="lefttop" edge="bottom" scale="1"  />
 		<layer name="l3" onclick="chooseMenumap(3)" url="%ROOT%/cuscayicons/l3off.png" x="1828" y="1627" align="lefttop" edge="bottom" scale="1"  />

@@ -64,8 +64,8 @@
 		loadscene(get(startscene), null, MERGE);
 		if(startactions !== null, startactions() );
 	</action>
-	
 	-->
+	
 	<!-- LOTE 9 -->
 	<scene name="lote_93" title="Lote 93" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122300.tiles/thumb.jpg" lat="4.59551600" lng="-74.52859400" heading="0.0">
 
@@ -81,6 +81,7 @@
 			<cube url="panos/IMG_20201210_122300.tiles/vr/pano_%s.jpg" />
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-174.777" atv="1.599" linkedscene="lote_92" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="135.082" atv="3.970" linkedscene="lote_91" />
 
 	</scene>
 	
@@ -116,6 +117,7 @@
 			<cube url="panos/IMG_20201210_122452.tiles/vr/pano_%s.jpg" />
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-51.210" atv="2.063" linkedscene="lote_92" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="38.219" atv="6.618" linkedscene="lote_93" />
 
 	</scene>
 	
@@ -512,9 +514,9 @@
 
 	</scene>
 	
-	<!-- POOL 
+	<!-- POOL -->
 	
-	<scene name="scene_IMG_20201210_131022" title="IMG_20201210_131022" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_131022.tiles/thumb.jpg" lat="4.59566500" lng="-74.52894600" heading="0.0">
+	<scene name="lote_01" title="Pool" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_131022.tiles/thumb.jpg" lat="4.59566500" lng="-74.52894600" heading="0.0">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -529,5 +531,5 @@
 		</image>
 
 	</scene>
-	-->
+	
 </krpano>
