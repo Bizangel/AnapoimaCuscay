@@ -281,8 +281,6 @@
 		<hotspot name="spot3" style="skin_hotspotstyle_right" ath="-148.784" atv="19.598" linkedscene="room2" />
 		
 		<hotspot name="room3hotspot" style="skin_hotspotstyle_left" ath="-63.890" atv="5.536" linkedscene="room3" />
-		
-		<events name="scene" onloadcomplete="setMapMenu(); VUHO_OVERLAY_ONSTART();" />
 	</scene>
 
 	<scene name="bbq" title="BBQ" onstart="updateRadar(9)" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_114647.tiles/thumb.jpg" lat="4.59510500" lng="-74.52876100" heading="0.0">

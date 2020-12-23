@@ -136,7 +136,7 @@
 		tour_loadscene(get(caller.linkedscene), null, MERGE, BLEND(0.5));
 	</action>
 	
-	<layer name="map" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false"
+	<layer name="map" onloaded="VUHO_OVERLAY_ONSTART();" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false"
 	align="leftbottom" scale="0.2" scale.mobile="0.11" scalechildren="true"  >
 		
 		
@@ -188,7 +188,7 @@
 	</action>
 	
 	<action name="setMapMenu" autorun="onstart">
-		delayedcall(1,easy_rescale(mapmenu, 1));
+		easy_rescale(mapmenu, 1);
 	</action>
 	
 	<action name="chooseMenumap" scope="local" args="lot_n">
@@ -225,7 +225,7 @@
 		
 	</action>
 	
-	<layer name="mapmenu" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" >
+	<layer name="mapmenu" onloaded="setMapMenu();" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" >
 		<layer name="l1" onclick="chooseMenumap(1)" url="%ROOT%/cuscayicons/l1on.png" x="575" y="450" align="lefttop" scale="0.3"  />
 		<layer name="l2" onclick="chooseMenumap(2)" url="%ROOT%/cuscayicons/l2off.png" x="525" y="430" align="lefttop" scale="0.3"  />
 		<layer name="l3" onclick="chooseMenumap(3)" url="%ROOT%/cuscayicons/l3off.png" x="477" y="400" align="lefttop" scale="0.3"  />
