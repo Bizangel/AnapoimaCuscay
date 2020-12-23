@@ -2,9 +2,25 @@
 
 	<layer name="stateHolder" keep="true" state="2f3h"  /> <!-- Possible are 2f3h 2f2h 1f3h 1f2h (2f3h > 2 floor 3 habs ) -->
 	
-	<!-- Also update general pano state, call on each loadscene -->
+	<!-- Also update general pano state, call on each loadscene INSIDE HOUSE-->
+	
+	<action name="enableHouseUI" scope="local">
+		set(layer[map].visible,true);
+		set(layer[map_toggle].visible,true);
+		set(layer[modelWindow].visible,true);
+	</action>
+	
+	<action name="disableHouseUI" scope="local">
+		set(layer[map].visible,false);
+		set(layer[map_toggle].visible,false);
+		set(layer[modelWindow].visible,false);
+	</action>
 	
 	<action name="updateRadar" scope="local" args="spot_n">
+	
+		<!-- Enable radar inside house, incase it was outside (lotes panos) -->
+		enableHouseUI();
+		
 		calc(spotname, 'spot' + spot_n);
 		set(layer[radar].parent, get(spotname));
 		set(layer[radar].heading, get(layer[get(spotname)].facing) );
@@ -19,6 +35,14 @@
 			set(hotspot[room3hotspot].visible, true);
 			,
 			set(hotspot[room3hotspot].visible, false);
+		);
+		
+		if(layer[stateHolder].state == '2f2h' OR layer[stateHolder].state == '2f3h',
+			set(layer[firstFloormap].visible,true);
+			set(layer[secondFloormap].visible,true);
+			,
+			set(layer[firstFloormap].visible,false);
+			set(layer[secondFloormap].visible,false);
 		);
 	</action>
 	
@@ -51,6 +75,9 @@
 				set(layer[spot22].visible, false);
 			);
 			
+			<!-- Update Map Tabs -->
+			set(layer[firstFloormap].url,%ROOT%/cuscayicons/floor1on.png);
+			set(layer[secondFloormap].url,%ROOT%/cuscayicons/floor2off.png);
 			,
 			set(layer[map].url,%ROOT%/floor2.png);
 			<!-- Disable 1st layers -->
@@ -63,16 +90,43 @@
 			);  
 			<!-- Disable 3hab spot -->
 			set(layer[spot22].visible, false);
+			
+			<!-- Update Map Tabs -->
+			set(layer[firstFloormap].url,%ROOT%/cuscayicons/floor1off.png);
+			set(layer[secondFloormap].url,%ROOT%/cuscayicons/floor2on.png);
 		);
 		
 
 	</action>
 	
-	
-	
+
 	<action name="switchHouse" scope="local" args="houseState">
 		set(layer[stateHolder].state, get(houseState) );
-		tour_loadscene(get(xml.scene));
+		
+		indexoftxt(i,get(xml.scene),'floorless');
+		if(i != -1,
+			<!-- is the floorless kind, reload original, so you can get redirected -->
+			calc(origpano,slice(xml.scene,0,i-1));
+			tour_loadscene(get(origpano));
+			
+			,
+			
+			tour_loadscene(get(xml.scene));
+		);
+		
+		<!-- Visual active cues-->
+		for(set(floor,1), floor LE 2, inc(floor), 
+			for(set(hab,2), hab LE 3, inc(hab), 
+				calc(displaystring, floor + 'f' + hab + 'h');
+				calc(nrooms, hab + floor - 1);
+				if(displaystring == houseState,
+					set(layer[calc('display_' + displaystring)].url, calc('%ROOT%/cuscayicons/' + nrooms + 'habon.png') );
+					,
+					set(layer[calc('display_' + displaystring)].url, calc('%ROOT%/cuscayicons/' + nrooms + 'haboff.png') );
+				);
+				
+			);
+		);
 	</action>
 	
 	<layer name="radar" keep = "true" url.flash="%SWFPATH%/plugins/radar.swf" url.html5="%SWFPATH%/plugins/radar.js" align="center" zorder="1" scale.mobile="2.3" fillalpha="0.5" scale="1"
@@ -82,8 +136,14 @@
 		tour_loadscene(get(caller.linkedscene), null, MERGE, BLEND(0.5));
 	</action>
 	
-	<layer name="map" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false" type="container"
-	capture="false" align="leftbottom" scale="0.2" scale.mobile="0.11" scalechildren="true" bgcapture="false"/>
+	<layer name="map" y="16%" x="50" url="floor1hab3.png" keep="true" handcursor="false"
+	align="leftbottom" scale="0.2" scale.mobile="0.11" scalechildren="true"  >
+		
+		
+		<layer name="firstFloormap" url="%ROOT%/cuscayicons/floor1on.png" onclick="switchFloor(1);" scale="1" align="lefttop" x="0" y="-185"/>
+		<layer name="secondFloormap" url="%ROOT%/cuscayicons/floor2off.png" onclick="switchFloor(2);" scale="1" align="lefttop" x="865" y="-185"/>
+		
+	</layer>
 	
 	<style name="mapspot" keep="true" url="greendot.png" parent="map" align="lefttop" edge="center" scale.mobile="2.5"
 	onclick="mapspot_onclick();"/>
@@ -112,5 +172,79 @@
 	<layer name="spot21" style="mapspot" x="1216" y="796" zorder="1" linkedscene="room_second_floor_shower" facing="-45"/>
 	
 	<layer name="spot22" style="mapspot" x="1744" y="1048" zorder="1" linkedscene="room3" facing="-90"/>
+	
+	
+	
+	<!-- Map Menu stuff -->
+	
+	<action name="toggle_mapmenu" scope="local" >
+		if(layer[mapmenu].alpha == 0,
+			set(layer[mapmenu].enabled,true);
+			tween(layer[mapmenu].alpha,1, .5);
+			,
+			set(layer[mapmenu].enabled, false);
+			tween(layer[mapmenu].alpha,0, .5);
+		);
+	</action>
+	
+	<action name="setMapMenu" autorun="onstart">
+		delayedcall(1,easy_rescale(mapmenu, 1));
+	</action>
+	
+	<action name="chooseMenumap" scope="local" args="lot_n">
+		for(set(i,1), i LE 9, inc(i), 
+			if (i != lot_n,
+				set(layer[calc('l' + i)].url, calc('%ROOT%/cuscayicons/l'+ i +'off.png'));
+				,
+				set(layer[calc('l' + i)].url, calc('%ROOT%/cuscayicons/l'+ i +'on.png'));
+			);
+		);
+		
+		loadLote(get(lot_n));
+	</action>
+	
+	<action name="loadLote" scope="local" args="lot_n">
+		indexoftxt(loteI,get(xml.scene),'lote');
+
+		if(loteI != -1,
+			def(isLote,boolean,true);
+			,
+			def(isLote,boolean,false);
+		);
+		<!-- print(get(isLote)); -->
+		if(lot_n == 1,
+			<!-- Casa Modelo -->
+			if(isLote,
+				tour_loadscene(parking);
+			);
+			,
+			<!-- Lote -->
+			tour_loadscene(calc('lote_' + lot_n + '1'));
+			disableHouseUI();
+		);
+		
+	</action>
+	
+	<layer name="mapmenu" keep="true" url="%ROOT%/map.png" handcursor="false" scale="0.1" align="center" enabled="true" alpha="1" >
+		<layer name="l1" onclick="chooseMenumap(1)" url="%ROOT%/cuscayicons/l1on.png" x="575" y="450" align="lefttop" scale="0.3"  />
+		<layer name="l2" onclick="chooseMenumap(2)" url="%ROOT%/cuscayicons/l2off.png" x="525" y="430" align="lefttop" scale="0.3"  />
+		<layer name="l3" onclick="chooseMenumap(3)" url="%ROOT%/cuscayicons/l3off.png" x="477" y="400" align="lefttop" scale="0.3"  />
+		<layer name="l4" onclick="chooseMenumap(4)" url="%ROOT%/cuscayicons/l4off.png" x="425" y="375" align="lefttop" scale="0.3"  />
+		<layer name="l5" onclick="chooseMenumap(5)" url="%ROOT%/cuscayicons/l5off.png" x="400" y="255" align="lefttop" scale="0.3"  />
+		<layer name="l6" onclick="chooseMenumap(6)" url="%ROOT%/cuscayicons/l6off.png" x="465" y="285" align="lefttop" scale="0.3"  />
+		<layer name="l7" onclick="chooseMenumap(7)" url="%ROOT%/cuscayicons/l7off.png" x="510" y="325" align="lefttop" scale="0.3"  />
+		<layer name="l8" onclick="chooseMenumap(8)" url="%ROOT%/cuscayicons/l8off.png" x="592" y="375" align="lefttop" scale="0.3"  />
+		<layer name="l9" onclick="chooseMenumap(9)" url="%ROOT%/cuscayicons/l9off.png" x="665" y="385" align="lefttop" scale="0.3"  />
+		
+		<layer name="modelWindow" url="%ROOT%/cuscayicons/modelwindow.png" align="center" x="8" y="325" scale="0.08" scalechildren="true">
+			<layer name="display_1f2h" url="%ROOT%/cuscayicons/2haboff.png" onclick="switchHouse(1f2h);" align="center" x="-150" y="-100" scale="1" />
+			<layer name="display_1f3h" url="%ROOT%/cuscayicons/3haboff.png" onclick="switchHouse(1f3h);" align="center" x="-150" y="600" scale="1" />
+			
+			<layer name="display_2f2h" url="%ROOT%/cuscayicons/3haboff.png" onclick="switchHouse(2f2h);" align="center" x="2350" y="-100" scale="1" />
+			<layer name="display_2f3h" url="%ROOT%/cuscayicons/4haboff.png" onclick="switchHouse(2f3h);" align="center" x="2350" y="600" scale="1" />
+		</layer>
+	</layer>
+	
+	
 	
 </krpano>

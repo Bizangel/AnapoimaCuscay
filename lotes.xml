@@ -1,7 +1,73 @@
 ﻿<krpano version="1.20.7" title="Virtual Tour">
+	<!--
+	<include url="skin/vtourskin.xml" if="1"/>
 	
+	<include url="vuho_overlay.xml" if="0"/>
+	
+	<skin_settings maps="true"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+	
+	-->
 	<!-- LOTE 9 -->
-	<scene name="scene_IMG_20201210_122300" title="IMG_20201210_122300" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122300.tiles/thumb.jpg" lat="4.59551600" lng="-74.52859400" heading="0.0">
+	<scene name="lote_93" title="Lote 93" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122300.tiles/thumb.jpg" lat="4.59551600" lng="-74.52859400" heading="0.0">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -14,12 +80,13 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122300.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-174.777" atv="1.599" linkedscene="lote_92" />
 
 	</scene>
 	
-	<scene name="scene_IMG_20201210_122401" title="IMG_20201210_122401" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122401.tiles/thumb.jpg" lat="4.59557300" lng="-74.52863200" heading="0.0">
+	<scene name="lote_92" title="Lote 92" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122401.tiles/thumb.jpg" lat="4.59557300" lng="-74.52863200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="79.526" vlookat="-1.443" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_122401.tiles/preview.jpg" />
 
@@ -30,12 +97,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122401.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="94.689" atv="4.411" linkedscene="lote_91" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="33.172" atv="3.325" linkedscene="lote_93" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_122452" title="IMG_20201210_122452" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122452.tiles/thumb.jpg" lat="4.59555000" lng="-74.52854200" heading="0.0">
+	<scene name="lote_91" title="Lote 91" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122452.tiles/thumb.jpg" lat="4.59555000" lng="-74.52854200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-7.313" vlookat="3.985" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_122452.tiles/preview.jpg" />
 
@@ -46,12 +115,13 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122452.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-51.210" atv="2.063" linkedscene="lote_92" />
 
 	</scene>
 	
 	<!-- LOTE 8 -->
 
-	<scene name="scene_IMG_20201210_122826" title="IMG_20201210_122826" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122826.tiles/thumb.jpg" lat="4.59577800" lng="-74.52878800" heading="0.0">
+	<scene name="lote_83" title="Lote 83" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122826.tiles/thumb.jpg" lat="4.59577800" lng="-74.52878800" heading="0.0">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -64,14 +134,16 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122826.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="28.454" atv="8.549" linkedscene="lote_82" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-16.350" atv="3.617" linkedscene="lote_81" />
 
 	</scene>
 	
 	
 
-	<scene name="scene_IMG_20201210_122707" title="IMG_20201210_122707" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122707.tiles/thumb.jpg" lat="4.59567500" lng="-74.52888200" heading="0.0">
+	<scene name="lote_82" title="Lote 82" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122707.tiles/thumb.jpg" lat="4.59567500" lng="-74.52888200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-45.697" vlookat="7.673" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_122707.tiles/preview.jpg" />
 
@@ -82,13 +154,15 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122707.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="11.327" atv="4.693" linkedscene="lote_81" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-104.544" atv="6.340" linkedscene="lote_83" />
 
 	</scene>
 
 	
-	<scene name="scene_IMG_20201210_122621" title="IMG_20201210_122621" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122621.tiles/thumb.jpg" lat="4.59543600" lng="-74.52880500" heading="0.0">
+	<scene name="lote_81" title="Lote 81" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_122621.tiles/thumb.jpg" lat="4.59543600" lng="-74.52880500" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-146.119" vlookat="0.105" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_122621.tiles/preview.jpg" />
 
@@ -99,13 +173,15 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122621.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="178.272" atv="4.225" linkedscene="lote_82" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-136.349" atv="1.711" linkedscene="lote_83" />
 
 	</scene>
 	<!-- LOTE 7 -->
 	
-	<scene name="scene_IMG_20201210_125539" title="IMG_20201210_125539" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125539.tiles/thumb.jpg" lat="4.59589800" lng="-74.52948200" heading="0.0">
+	<scene name="lote_71" title="Lote 71" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125539.tiles/thumb.jpg" lat="4.59589800" lng="-74.52948200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-156.543" vlookat="-0.437" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125539.tiles/preview.jpg" />
 
@@ -116,12 +192,13 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125539.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="169.171" atv="0.045" linkedscene="lote_72" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_125626" title="IMG_20201210_125626" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125626.tiles/thumb.jpg" lat="4.59605000" lng="-74.52938200" heading="0.0">
+	<scene name="lote_72" title="Lote 72" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125626.tiles/thumb.jpg" lat="4.59605000" lng="-74.52938200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-27.660" vlookat="-1.776" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125626.tiles/preview.jpg" />
 
@@ -132,12 +209,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125626.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-83.651" atv="-1.124" linkedscene="lote_73" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="15.624" atv="4.124" linkedscene="lote_71" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_125716" title="IMG_20201210_125716" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125716.tiles/thumb.jpg" lat="4.59602800" lng="-74.52923200" heading="0.0">
+	<scene name="lote_73" title="Lote 73" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125716.tiles/thumb.jpg" lat="4.59602800" lng="-74.52923200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="139.667" vlookat="7.720" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125716.tiles/preview.jpg" />
 
@@ -148,15 +227,16 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125716.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="166.819" atv="6.561" linkedscene="lote_72" />
 
 	</scene>
 	
 	
 	<!-- LOTE 6 -->
 	
-		<scene name="scene_IMG_20201210_124435" title="IMG_20201210_124435" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124435.tiles/thumb.jpg" lat="4.59613800" lng="-74.52935900" heading="0.0">
+	<scene name="lote_61" title="Lote 61" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124435.tiles/thumb.jpg" lat="4.59613800" lng="-74.52935900" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="50.867" vlookat="3.808" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_124435.tiles/preview.jpg" />
 
@@ -167,28 +247,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_124435.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="30.688" atv="0.624" linkedscene="lote_63" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="79.137" atv="7.388" linkedscene="lote_62" />
 
 	</scene>
+	
+	<scene name="lote_62" title="Lote 62" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124952.tiles/thumb.jpg" lat="4.59624500" lng="-74.52968300" heading="0.0">
 
-	<scene name="scene_IMG_20201210_124844" title="IMG_20201210_124844" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124844.tiles/thumb.jpg" lat="4.59608400" lng="-74.52952000" heading="0.0">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/IMG_20201210_124844.tiles/preview.jpg" />
-
-		<image if="!(webvr.isenabled OR device.mobilevr)">
-			<cube url="panos/IMG_20201210_124844.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
-		</image>
-
-		<image if="webvr.isenabled OR device.mobilevr">
-			<cube url="panos/IMG_20201210_124844.tiles/vr/pano_%s.jpg" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_IMG_20201210_124952" title="IMG_20201210_124952" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124952.tiles/thumb.jpg" lat="4.59624500" lng="-74.52968300" heading="0.0">
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="107.344" vlookat="1.091" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_124952.tiles/preview.jpg" />
 
@@ -199,18 +265,34 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_124952.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-31.504" atv="4.863" linkedscene="lote_61" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="76.335" atv="-4.743" linkedscene="lote_63" />
 
 	</scene>
 	
-	
-	
-	
+	<scene name="lote_63" title="Lote 63" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124844.tiles/thumb.jpg" lat="4.59608400" lng="-74.52952000" heading="0.0">
+
+		<view hlookat="124.366" vlookat="11.084" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_20201210_124844.tiles/preview.jpg" />
+
+		<image if="!(webvr.isenabled OR device.mobilevr)">
+			<cube url="panos/IMG_20201210_124844.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
+		</image>
+
+		<image if="webvr.isenabled OR device.mobilevr">
+			<cube url="panos/IMG_20201210_124844.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-106.476" atv="3.768" linkedscene="lote_61" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="150.110" atv="17.421" linkedscene="lote_62" />
+
+	</scene>
 	
 	<!-- LOTE 5 -->
 	
-		<scene name="scene_IMG_20201210_123846" title="IMG_20201210_123846" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123846.tiles/thumb.jpg" lat="4.59621100" lng="-74.52974400" heading="0.0">
+	<scene name="lote_51" title="Lote 51" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123846.tiles/thumb.jpg" lat="4.59621100" lng="-74.52974400" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-147.150" vlookat="8.940" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_123846.tiles/preview.jpg" />
 
@@ -221,12 +303,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_123846.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="176.241" atv="2.654" linkedscene="lote_52" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-143.838" atv="3.072" linkedscene="lote_53" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_123945" title="IMG_20201210_123945" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123945.tiles/thumb.jpg" lat="4.59652600" lng="-74.52979500" heading="0.0">
+	<scene name="lote_52" title="Lote 52" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_123945.tiles/thumb.jpg" lat="4.59652600" lng="-74.52979500" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-66.614" vlookat="4.538" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_123945.tiles/preview.jpg" />
 
@@ -237,12 +321,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_123945.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-2.433" atv="1.907" linkedscene="lote_51" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-120.503" atv="0.965" linkedscene="lote_53" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_124051" title="IMG_20201210_124051" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124051.tiles/thumb.jpg" lat="4.59652900" lng="-74.52986200" heading="0.0">
+	<scene name="lote_53" title="Lote 53" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_124051.tiles/thumb.jpg" lat="4.59652900" lng="-74.52986200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="141.529" vlookat="0.919" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_124051.tiles/preview.jpg" />
 
@@ -253,15 +339,16 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_124051.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-166.112" atv="4.298" linkedscene="lote_52" />
 
 	</scene>
 	
 	
 	<!-- LOTE 4 -->
 	
-	<scene name="scene_IMG_20201210_125203" title="IMG_20201210_125203" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125203.tiles/thumb.jpg" lat="4.59574300" lng="-74.52950900" heading="0.0">
+	<scene name="lote_41" title="Lote 41" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125203.tiles/thumb.jpg" lat="4.59574300" lng="-74.52950900" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-57.438" vlookat="17.125" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125203.tiles/preview.jpg" />
 
@@ -272,12 +359,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125203.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-51.335" atv="12.604" linkedscene="lote_42" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-70.196" atv="7.691" linkedscene="lote_43" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_125325" title="IMG_20201210_125325" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125325.tiles/thumb.jpg" lat="4.59558300" lng="-74.52979900" heading="0.0">
+	<scene name="lote_42" title="Lote 42" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125325.tiles/thumb.jpg" lat="4.59558300" lng="-74.52979900" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-129.065" vlookat="-0.248" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125325.tiles/preview.jpg" />
 
@@ -288,12 +377,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125325.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-158.781" atv="-7.886" linkedscene="lote_41" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-57.789" atv="4.677" linkedscene="lote_43" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_125409" title="IMG_20201210_125409" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125409.tiles/thumb.jpg" lat="4.59554800" lng="-74.52955300" heading="0.0">
+	<scene name="lote_43" title="Lote 43" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_125409.tiles/thumb.jpg" lat="4.59554800" lng="-74.52955300" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-271.991" vlookat="-4.059" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_125409.tiles/preview.jpg" />
 
@@ -304,14 +395,16 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_125409.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="47.629" atv="2.979" linkedscene="lote_42" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="86.059" atv="-8.565" linkedscene="lote_41" />
 
 	</scene>
 	
 	<!-- LOTE 3 -->
 	
-		<scene name="scene_IMG_20201210_130521" title="IMG_20201210_130521" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130521.tiles/thumb.jpg" lat="4.59573900" lng="-74.52935900" heading="0.0">
+		<scene name="lote_31" title="Lote 31" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130521.tiles/thumb.jpg" lat="4.59573900" lng="-74.52935900" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="147.368" vlookat="-0.941" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130521.tiles/preview.jpg" />
 
@@ -322,12 +415,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130521.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="106.796" atv="-4.569" linkedscene="lote_33" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-176.016" atv="6.601" linkedscene="lote_32" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_130547" title="IMG_20201210_130547" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130547.tiles/thumb.jpg" lat="4.59541500" lng="-74.52945600" heading="0.0">
+	<scene name="lote_32" title="Lote 32" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130547.tiles/thumb.jpg" lat="4.59541500" lng="-74.52945600" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-163.854" vlookat="3.516" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130547.tiles/preview.jpg" />
 
@@ -338,12 +433,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130547.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-152.114" atv="-1.921" linkedscene="lote_33" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="161.100" atv="2.019" linkedscene="lote_31" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_130637" title="IMG_20201210_130637" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130637.tiles/thumb.jpg" lat="4.59556800" lng="-74.52936700" heading="0.0">
+	<scene name="lote_33" title="Lote 33" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130637.tiles/thumb.jpg" lat="4.59556800" lng="-74.52936700" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="143.874" vlookat="8.084" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130637.tiles/preview.jpg" />
 
@@ -354,14 +451,16 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130637.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="117.759" atv="6.460" linkedscene="lote_32" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="161.024" atv="8.723" linkedscene="lote_31" />
 
 	</scene>
 	
 	<!-- LOTE 2 -->
 	
-	<scene name="scene_IMG_20201210_130755" title="IMG_20201210_130755" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130755.tiles/thumb.jpg" lat="4.59552800" lng="-74.52928200" heading="0.0">
+	<scene name="lote_23" title="Lote 23" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130755.tiles/thumb.jpg" lat="4.59552800" lng="-74.52928200" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="206.594" vlookat="7.047" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130755.tiles/preview.jpg" />
 
@@ -372,12 +471,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130755.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="163.488" atv="-1.699" linkedscene="lote_21" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-127.979" atv="8.124" linkedscene="lote_22" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_130824" title="IMG_20201210_130824" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130824.tiles/thumb.jpg" lat="4.59528000" lng="-74.52929300" heading="0.0">
+	<scene name="lote_22" title="Lote 22" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130824.tiles/thumb.jpg" lat="4.59528000" lng="-74.52929300" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="110.697" vlookat="4.008" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130824.tiles/preview.jpg" />
 
@@ -388,12 +489,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130824.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="87.124" atv="-2.085" linkedscene="lote_23" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="145.819" atv="-2.952" linkedscene="lote_21" />
 
 	</scene>
 
-	<scene name="scene_IMG_20201210_130902" title="IMG_20201210_130902" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130902.tiles/thumb.jpg" lat="4.59529500" lng="-74.52918100" heading="0.0">
+	<scene name="lote_21" title="Lote 21" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_130902.tiles/thumb.jpg" lat="4.59529500" lng="-74.52918100" heading="0.0">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="129.516" vlookat="5.493" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_20201210_130902.tiles/preview.jpg" />
 
@@ -404,12 +507,14 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_130902.tiles/vr/pano_%s.jpg" />
 		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="157.144" atv="6.460" linkedscene="lote_23" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="90.080" atv="9.340" linkedscene="lote_22" />
 
 	</scene>
 	
-	<!-- POOL -->
+	<!-- POOL 
 	
-		<scene name="scene_IMG_20201210_131022" title="IMG_20201210_131022" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_131022.tiles/thumb.jpg" lat="4.59566500" lng="-74.52894600" heading="0.0">
+	<scene name="scene_IMG_20201210_131022" title="IMG_20201210_131022" onstart="" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_131022.tiles/thumb.jpg" lat="4.59566500" lng="-74.52894600" heading="0.0">
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
@@ -424,4 +529,5 @@
 		</image>
 
 	</scene>
+	-->
 </krpano>
