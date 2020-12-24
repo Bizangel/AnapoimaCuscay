@@ -80,6 +80,7 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_122300.tiles/vr/pano_%s.jpg" />
 		</image>
+		
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-174.777" atv="1.599" linkedscene="lote_92" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="135.082" atv="3.970" linkedscene="lote_91" />
 

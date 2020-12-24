@@ -1,5 +1,5 @@
-﻿<krpano version="1.20.7" title="Virtual Tour">
-	<layer name="debug" val="1"/>
+﻿<krpano version="1.20.7" title="Virtual Tour" showerrors="false" logkey="false">
+	<layer name="debug" val="0"/>
 	
 	<include url="skin/vtourskin.xml" if="0"/>
 	
