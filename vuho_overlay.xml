@@ -290,7 +290,7 @@
 		¿Estás seguro que quieres entrar?
 	</data>	
 	
-	<layer name="map_toggle" type="image" keep="true" url="%VIEWER%/icons/mapon.png" scale="0.05" align="leftbottom" x="50" y="50" onclick="toggle_map();"
+	<layer name="map_toggle" type="image" keep="true" url="%VIEWER%/icons/mapon.png" scale="0.209" align="leftbottom" x="50" y="50" onclick="toggle_map();"
 	alpha="1" enabled="true"/>
 	
 	<action name="toggle_map" scope="local">
@@ -414,7 +414,7 @@
 		onclick="remove_slides_images();set(layer[Close_Button].url,%VIEWER%/icons/closeoff.png);"
 		parent="infoslide1" 
 		align="righttop"
-		x="5%" y="5%" scale="0.05"/>
+		x="5%" y="5%" scale="0.25"/>
 	</layer>
 	
 	<action name="easy_rescale_old" scope="local" args="layername, scalar">

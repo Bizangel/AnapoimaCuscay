@@ -188,6 +188,11 @@
 		);
 	</action>
 	
+	<action name="disable_mapmenu" scope="local">
+		set(layer[mapmenu].enabled, false);
+		tween(layer[mapmenu].alpha,0, .5);
+	</action>
+	
 	<action name="setMapMenu" autorun="onstart">
 		easy_rescale(mapmenu, 1);
 	</action>
@@ -246,6 +251,15 @@
 			<layer name="display_2f2h" url="%ROOT%/cuscayicons/3haboff.png" onclick="switchHouse(2f2h);" align="center" x="2350" y="-100" scale="1" />
 			<layer name="display_2f3h" url="%ROOT%/cuscayicons/4habon.png" onclick="switchHouse(2f3h);" align="center" x="2350" y="600" scale="1" />
 		</layer>
+		
+		<layer name="mapmenu_Close_Button" type="image" url="%VIEWER%/icons/closeoff.png"
+		onover="set(layer[mapmenu_Close_Button].url,%VIEWER%/icons/closeon.png)"
+		onout="set(layer[mapmenu_Close_Button].url,%VIEWER%/icons/closeoff.png)"
+		onclick="disable_mapmenu();set(layer[mapmenu_Close_Button].url,%VIEWER%/icons/closeoff.png);"
+		parent="mapmenu" 
+		align="righttop"
+		x="5%" y="5%" scale="0.8"/>
+		
 	</layer>
 	
 	
