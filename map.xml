@@ -1,5 +1,13 @@
 <krpano>	
-
+	
+	
+	<layer name="PlanoToggle" y="50" x="150" url="%ROOT%/icons/planoon.png" 
+	scale="0.2"
+	align="leftbottom"
+	handcursor="true"
+	onclick="toggle_mapmenu();"
+	keep="true"/>
+	
 	<layer name="stateHolder" keep="true" state="2f3h"  /> <!-- Possible are 2f3h 2f2h 1f3h 1f2h (2f3h > 2 floor 3 habs ) -->
 	
 	<!-- Also update general pano state, call on each loadscene INSIDE HOUSE-->

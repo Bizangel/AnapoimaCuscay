@@ -516,16 +516,16 @@
 				<!-- PORTRAIT -->
 				set(layer[Map_Toggle].x,4%);
 				set(layer[Map_Toggle].y,20%);
-				set(layer[FurnitureToggle].x,4%);
-				set(layer[FurnitureToggle].y,5%);
+				set(layer[PlanoToggle].x,4%);
+				set(layer[PlanoToggle].y,5%);
 				
 				set(layer[OverlayMenu].scale, 0.12);
 				,
 				<!-- LANDSCAPE -->
 				set(layer[map_toggle].x,50);
 				set(layer[map_toggle].y,50);
-				set(layer[FurnitureToggle].x,150);
-				set(layer[FurnitureToggle].y,50);
+				set(layer[PlanoToggle].x,150);
+				set(layer[PlanoToggle].y,50);
 				
 				set(layer[OverlayMenu].scale, 0.17);
 			);
