@@ -116,7 +116,20 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
+	
+	<hotspot name="nadirlogo" keep="true"
+	         url="%ROOT%/cuscayicons/cuscay_roundlogo.png"
+	         ath="0"
+	         atv="90"
+	         distorted="true"
+	         scale="1"
+	         rotate="0.0"
+	         onclick="openurl('https://proyectocuscay.com/');"
+	         />
 
+	<!-- onviewchange event - update logo rotation on pano rotation -->
+	<events name="nadirlogo" keep="true" onviewchange="copy(hotspot[nadirlogo].rotate, view.hlookat);" />
+	
 	<!-- startup action - load the first scene -->
 	<action name="startup" autorun="onstart">
 		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
