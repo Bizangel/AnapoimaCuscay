@@ -187,6 +187,7 @@
 	<!-- Map Menu stuff -->
 	
 	<action name="toggle_mapmenu" scope="local" >
+		onresize_action();
 		if(layer[mapmenu].alpha == 0,
 			set(layer[mapmenu].enabled,true);
 			tween(layer[mapmenu].alpha,1, .5);

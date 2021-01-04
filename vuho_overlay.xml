@@ -294,6 +294,7 @@
 	alpha="1" enabled="true"/>
 	
 	<action name="toggle_map" scope="local">
+		onresize_action();
 		if(layer[map].alpha == 1,
 			disablemap();
 		);
