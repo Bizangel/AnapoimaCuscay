@@ -152,7 +152,7 @@
 			<cube url="panos/IMG_20201210_105021.tiles/vr/pano_%s.jpg" />
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="12.418" atv="13.335"  linkedscene="room1_outside" />
-		<!-- <hotspot name="spot2" style="skin_hotspotstyle_right" ath="63.276" atv="8.940" linkedscene="room1_bath" /> -->
+		<hotspot name="spot2" style="skin_hotspotstyle_right" ath="63.276" atv="8.940" linkedscene="room1_shower" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="146.587" atv="2.650" linkedscene="parking" />
 
 	</scene>
@@ -189,7 +189,7 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_105346.tiles/vr/pano_%s.jpg" />
 		</image>
-		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-28.748" atv="10.219" linkedscene="room1_bath" /> -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-28.748" atv="10.219" linkedscene="room1" />
 
 	</scene>
 
