@@ -158,7 +158,7 @@
 	onclick="mapspot_onclick();"/>
 	
 	<layer name="spot1" style="mapspot" x="1085" y="1045" zorder="1" linkedscene="room1" facing="-90"/>
-	<layer name="spot2" style="mapspot" x="1280" y="1062" zorder="1" linkedscene="room1_bath" facing="200"/>
+	<!-- <layer name="spot2" style="mapspot" x="1280" y="1062" zorder="1" linkedscene="room1_bath" facing="200"/> -->
 	<layer name="spot3" style="mapspot" x="1339" y="998" zorder="1" linkedscene="room1_shower" facing="150"/>
 	<layer name="spot4" style="mapspot" x="1682" y="1142" zorder="1" linkedscene="room2" facing="205"/>
 	<layer name="spot5" style="mapspot" x="1449" y="1063" zorder="1" linkedscene="room2_bath" facing="150"/>

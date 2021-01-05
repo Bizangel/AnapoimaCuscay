@@ -152,29 +152,29 @@
 			<cube url="panos/IMG_20201210_105021.tiles/vr/pano_%s.jpg" />
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="12.418" atv="13.335"  linkedscene="room1_outside" />
-		<hotspot name="spot2" style="skin_hotspotstyle_right" ath="63.276" atv="8.940" linkedscene="room1_bath" />
+		<!-- <hotspot name="spot2" style="skin_hotspotstyle_right" ath="63.276" atv="8.940" linkedscene="room1_bath" /> -->
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="146.587" atv="2.650" linkedscene="parking" />
 
 	</scene>
 
-	<scene name="room1_bath" title="Room 1 Bathroom" onstart="updateRadar(2);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_105224.tiles/thumb.jpg" lat="4.59527300" lng="-74.52886300" heading="0.0">
+	<!-- <scene name="room1_bath" title="Room 1 Bathroom" onstart="updateRadar(2);" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_105224.tiles/thumb.jpg" lat="4.59527300" lng="-74.52886300" heading="0.0"> -->
 
-		<view hlookat="-144.431" vlookat="28.671" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<!-- <view hlookat="-144.431" vlookat="28.671" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" /> -->
 
-		<preview url="panos/IMG_20201210_105224.tiles/preview.jpg" />
+		<!-- <preview url="panos/IMG_20201210_105224.tiles/preview.jpg" /> -->
 
-		<image if="!(webvr.isenabled OR device.mobilevr)">
-			<cube url="panos/IMG_20201210_105224.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" />
-		</image>
+		<!-- <image if="!(webvr.isenabled OR device.mobilevr)"> -->
+			<!-- <cube url="panos/IMG_20201210_105224.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176" /> -->
+		<!-- </image> -->
 
-		<image if="webvr.isenabled OR device.mobilevr">
-			<cube url="panos/IMG_20201210_105224.tiles/vr/pano_%s.jpg" />
-		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="94.532" atv="15.015" linkedscene="room1_shower" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-96.198" atv="14.475" rotate="60" url="curved-arrow-left.png" linkedscene="parking" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="-81.871" atv="15.089" rotate="-60" url="curved-arrow-right.png" linkedscene="room1" />
+		<!-- <image if="webvr.isenabled OR device.mobilevr"> -->
+			<!-- <cube url="panos/IMG_20201210_105224.tiles/vr/pano_%s.jpg" /> -->
+		<!-- </image> -->
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="94.532" atv="15.015" linkedscene="room1_shower" /> -->
+		<!-- <hotspot name="spot2" style="skin_hotspotstyle" ath="-96.198" atv="14.475" rotate="60" url="curved-arrow-left.png" linkedscene="parking" /> -->
+		<!-- <hotspot name="spot3" style="skin_hotspotstyle" ath="-81.871" atv="15.089" rotate="-60" url="curved-arrow-right.png" linkedscene="room1" /> -->
 
-	</scene>
+	<!-- </scene> -->
 
 	<scene name="room1_shower" title="Room 1 Shower" onstart="updateRadar(3)" havevrimage.mobilevr="false" havevrimage.no-mobilevr="true" thumburl="panos/IMG_20201210_105346.tiles/thumb.jpg" lat="4.59530000" lng="-74.52883800" heading="0.0">
 
@@ -189,7 +189,7 @@
 		<image if="webvr.isenabled OR device.mobilevr">
 			<cube url="panos/IMG_20201210_105346.tiles/vr/pano_%s.jpg" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-28.748" atv="10.219" linkedscene="room1_bath" />
+		<!-- <hotspot name="spot1" style="skin_hotspotstyle" ath="-28.748" atv="10.219" linkedscene="room1_bath" /> -->
 
 	</scene>
 
